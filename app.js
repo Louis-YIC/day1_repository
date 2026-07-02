@@ -1,5 +1,6 @@
 const express = require('express');
 const itemsRouter = require('./routes/items');
+const productsRouter = require('./routes/products');
 
 const app = express();
 app.use(express.json());
@@ -10,5 +11,6 @@ app.get('/healthz', (req, res) => {
 });
 
 app.use('/items', itemsRouter);
+app.use('/products', productsRouter);
 
 module.exports = app;
